@@ -115,10 +115,10 @@ printf '\033]2;Downloading Pyrit\a'
 
 # Install Pyrit
 if [ ! -d Pyrit ];then
-	git clone https://github.com/shadowjynxs/Pyritt
+	git clone https://github.com/shadowjynxs/pyrit
 fi
-sed -i "s/COMPILE_AESNI/COMPILE_AESNIX/" Pyritt/cpyrit/_cpyrit_cpu.c
-cd Pyritt && python2 setup.py clean && python2 setup.py build && python2 setup.py install
+sed -i "s/COMPILE_AESNI/COMPILE_AESNIX/" pyrit/cpyrit/_cpyrit_cpu.c
+cd pyrit && python2 setup.py clean && python2 setup.py build && python2 setup.py install
 
 echo -e "\033[1m\033[31mInstallation finished\033[0m"
 printf '\033]2; Installation finished\a'
